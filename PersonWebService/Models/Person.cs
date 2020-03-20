@@ -1,18 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿
+using System.ComponentModel.DataAnnotations;
 using System.ServiceModel;
-using System.Web;
 
-namespace PersonService.Models
+namespace PersonWebService.Models
 {
     [MessageContract]
     public class Person
     {
         [MessageBodyMember]
+        [StringLength(50)]
         public string FirstName { get; set; }
 
         [MessageBodyMember]
+        [StringLength(50)]
         public string LastName { get; set; }
 
     }
